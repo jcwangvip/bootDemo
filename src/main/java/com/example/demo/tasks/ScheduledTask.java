@@ -9,25 +9,24 @@ import org.springframework.stereotype.Component;
 
 @Component
 @PropertySource("classpath:quartz.properties")
-public class ScheduledTask{
-	
-	
+public class ScheduledTask {
 
-  @Scheduled(fixedRate = 5000)
-  public void scheduledTask(){
-    
-	  System.out.println("sdf-测试一下git操作-----");
-  }
-  
-  @Scheduled(cron = "0 */1 *  * * * ")
-  public void scheduledTaskOrCron(){
-    
-	  System.out.println("gogogo----------");
-  }
-  
-  @Scheduled(cron="${jobs.schedule}")
-  public void scheduledTaskOrCron1(){
-    
-	  System.out.println("12345y678----------");
-  }
+	@Scheduled(fixedRate = 5000)
+	public void scheduledTask() {
+		String ce = "adf";
+		System.out.println("sdf-测试一下git操作----+" + ce + "-");
+		System.out.println("sdf-测试一下git操作-----");
+	}
+
+	@Scheduled(cron = "0 */1 *  * * * ")
+	public void scheduledTaskOrCron() {
+
+		System.out.println("gogogo----------");
+	}
+
+	@Scheduled(cron = "${jobs.schedule}")
+	public void scheduledTaskOrCron1() {
+
+		System.out.println("12345y678----------");
+	}
 }
