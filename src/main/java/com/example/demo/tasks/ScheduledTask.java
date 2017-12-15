@@ -16,7 +16,7 @@ public class ScheduledTask{
   @Scheduled(fixedRate = 5000)
   public void scheduledTask(){
     
-	  System.out.println("sdf----------");
+	  System.out.println("sdf-测试一下git操作-----");
   }
   
   @Scheduled(cron = "0 */1 *  * * * ")
